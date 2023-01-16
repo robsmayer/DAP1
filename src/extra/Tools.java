@@ -6,8 +6,12 @@ import java.util.Scanner;
 /**
  *      Methods that are helpful and important for testing
  *      and the Exam.
+ *
+ *      get array user input
+ *      get random array of ints, Integer,
+ *      print different ArrayType
  */
-public class TestTools {
+public class Tools {
 
     //System.out.println("arr[i] = " + arr[i] + " arr[i-1] = " + arr[i-1] + " i = " + i);
     private static int lowBo =-20; // Lowerbound
@@ -121,7 +125,8 @@ public class TestTools {
 
     }
 
-    public static Integer[] getRandArr(int size){
+    // why cant same name
+    public static Integer[] getRandINTArr(int size){
         if(size > 0){
             Random rand = new Random(42);
             Integer[] arr = new Integer[size];
@@ -186,6 +191,7 @@ public class TestTools {
     // for primesTill
 
 
+
     public static boolean[] primesTill(int n)
     {
         if(n > 0)
@@ -231,6 +237,18 @@ public class TestTools {
         return i1 + i2;
     }
 
+    public static void asciiValues()
+    {
+        System.out.println("A = " +(int)'A');
+        System.out.println("M = " +(int)'M');
+        System.out.println("Z = " +(int)'Z');
+        System.out.println();
+        System.out.println("a = " +(int)'a');
+        System.out.println("m = " +(int)'m');
+        System.out.println("z = " + (int)'z');
+
+    }
+
 
      public static void main(String[] args){
 
@@ -240,28 +258,4 @@ public class TestTools {
     }
 }
 
-    /*
-            https://www.javatpoint.com/lcm-of-two-numbers-in-java
-    public static int mmc(int n1, int n2, int aux)
-    {
-        if(n1 % aux != 0 || n2 % aux != 0){
-            if(n1 > aux && n2 > aux)
-            {
-                return mmc(n1,n2,aux + 1);
-            }
-            else
-                return aux;
-        }
-        else{
 
-            if(n1 % aux == 0 && n2 % aux == 0)
-            {
-                n1 = n1 / aux;
-                n2 = n2 / aux;
-                System.out.println("n1 = " + n1 + " n2 = " + n2 + " aux = " + aux );
-                return  mmc(n1,n2,aux);
-            }
-            return mmc(n1,n2,aux + 1);
-        }
-
-    } */

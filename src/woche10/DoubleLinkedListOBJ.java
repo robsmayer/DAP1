@@ -10,6 +10,23 @@ public class DoubleLinkedListOBJ {
         size = 0;
     }
 
+    // Creates list with array of objects
+    public DoubleLinkedListOBJ(Object[] arr){
+        if(arr.length > 0)
+        {
+            DoubleLinkedListOBJ list = new DoubleLinkedListOBJ();
+
+            for(int i = 0; i < arr.length; i++)
+            {
+                list.add(arr[i]);
+            }
+
+            list.showAll();
+        }
+        else
+            throw new IllegalArgumentException();
+    }
+
     public int getSize(){
         return size;
     }
@@ -98,6 +115,24 @@ public class DoubleLinkedListOBJ {
         }
         System.out.println();
     }
+
+
+
+    /**
+     *  Iterator methods
+     */
+
+    public ForwardIterator iterator()
+    {
+        return new ForwardIterator(first);
+    }
+
+    public ReverseIterator revIterator()
+    {
+        return new ReverseIterator(last);
+    }
+
+
 
 
 

@@ -1,6 +1,6 @@
 package woche6;
 
-import extra.TestTools;
+import extra.Tools;
 
 import java.util.Scanner;
 
@@ -11,7 +11,7 @@ public class Ubungsblatt5 {
         if(low < high)
         {
             int part = partition(arr,low,high);
-            TestTools.printArray(arr);
+            Tools.printArray(arr);
             quicksort(arr, low, part - 1);
             quicksort(arr, part + 1, high);
         }
@@ -246,7 +246,7 @@ public class Ubungsblatt5 {
     }
     public static void testQuicksort(){
         int[] arr = {1,5,2,7,6,9};
-        TestTools.printArray(arr);
+        Tools.printArray(arr);
         quicksort(arr, 1, arr.length - 1);
     }
 

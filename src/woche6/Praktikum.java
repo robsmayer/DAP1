@@ -1,5 +1,5 @@
 package woche6;
-import extra.TestTools;
+import extra.Tools;
 import java.util.*;
 
 // Praktikum 3
@@ -185,7 +185,7 @@ public class Praktikum {
         Scanner myScan = new Scanner(System.in);
 
         int select = myScan.nextInt();
-        TestTools tool = new TestTools();
+        Tools tool = new Tools();
 
         switch (select) {
             case 1 -> {
@@ -229,15 +229,15 @@ public class Praktikum {
 
                 System.out.print("Set size: ");
                 int size = myScan.nextInt();
-                int[] randomArr = TestTools.getRandomArr(size);
-                TestTools.printArray(randomArr);
+                int[] randomArr = Tools.getRandomArr(size);
+                Tools.printArray(randomArr);
                 System.out.println();
                 System.out.println("Max = " + getMax(randomArr, randomArr.length)); // Get Max -TODO reduce complexity
             }
 
             case 5 -> {
-                int[] arr = TestTools.randomOrNot(myScan);
-                TestTools.printArray(arr);
+                int[] arr = Tools.randomOrNot(myScan);
+                Tools.printArray(arr);
 
                 if(isSorted(arr,arr.length-1))
                     System.out.print("is sorted");
