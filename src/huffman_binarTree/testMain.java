@@ -1,4 +1,4 @@
-package woche7_8;
+package huffman_binarTree;
 
 public class testMain {
 
@@ -29,7 +29,7 @@ public class testMain {
         System.out.println("--------------------");
         hal.show();
     }
-   public static void main(String args[])
+   public static void main(String[] args)
     {
         String s = "halloween";
 

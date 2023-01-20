@@ -1,4 +1,4 @@
-package praktikum5Woche8;
+package binarySearchTree_praktikum;
 
 public class TreeTest
 {

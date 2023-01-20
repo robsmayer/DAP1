@@ -1,5 +1,0 @@
-
-    About:
-    Binary Search Tree
-    Data Encryption - compact
-

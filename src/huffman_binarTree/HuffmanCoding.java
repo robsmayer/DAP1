@@ -1,4 +1,4 @@
-package woche7_8;
+package huffman_binarTree;
 
 public class HuffmanCoding {
 

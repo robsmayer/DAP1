@@ -1,8 +1,7 @@
-package woche7_8;
+package huffman_binarTree;
 
 /**
  *      Folien bis 548
- *
  *   Tree defined recursively
  */
 public class HuffmanTree {
