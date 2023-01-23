@@ -1,4 +1,4 @@
-package woche10;
+package doubleLinkedL_Vorlesung;
 
 public class ForwardIterator extends ListIterator{
     public ForwardIterator(Element e)

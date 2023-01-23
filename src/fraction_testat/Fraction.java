@@ -1,4 +1,4 @@
-package woche5;
+package fraction_testat;
 
 public class Fraction {
 

@@ -1,4 +1,4 @@
-package woche6;
+package ub5_praktikum3;
 import extra.Tools;
 import java.util.*;
 

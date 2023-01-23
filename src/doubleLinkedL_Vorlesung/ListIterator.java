@@ -1,6 +1,4 @@
-package woche10;
-
-import java.util.List;
+package doubleLinkedL_Vorlesung;
 
 public abstract class ListIterator {
 
