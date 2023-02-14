@@ -53,7 +53,7 @@ public class CharacterSearchTree
     }
 
 
-    public void encode()
+ public void encode()
     {
         if(!isEmpty())
         {
@@ -92,6 +92,26 @@ public class CharacterSearchTree
             System.out.println(content.toString());
             leftChild.showPreOrder();
             rightChild.showPreOrder();
+        }
+    }
+
+    public void showInOrder()
+    {
+        if(!isEmpty())
+        {
+            leftChild.showInOrder();
+            System.out.println(content.toString());
+            rightChild.showInOrder();
+        }
+    }
+
+    public void showPostOrder()
+    {
+        if(!isEmpty())
+        {
+            leftChild.showPostOrder();
+            rightChild.showPostOrder();
+            System.out.println(content.toString());
         }
     }
 
@@ -250,12 +270,9 @@ public class CharacterSearchTree
     {
         if(!isEmpty() && !other.isEmpty())
         {
-            if(leftChild.isEmpty() && !other.leftChild.isEmpty() || !leftChild.isEmpty() && other.leftChild.isEmpty())
-                return false;
-            if(rightChild.isEmpty() && !other.rightChild.isEmpty() || !rightChild.isEmpty() && other.rightChild.isEmpty()) {
-                return false;
-            }
-            return true;
+            return leftChild.isEmpty() && !other.leftChild.isEmpty() || !leftChild.isEmpty() && other.leftChild.isEmpty()
+            || rightChild.isEmpty() && !other.rightChild.isEmpty() || !rightChild.isEmpty() && other.rightChild.isEmpty();
+
         }
         else
             return isEmpty() && other.isEmpty();

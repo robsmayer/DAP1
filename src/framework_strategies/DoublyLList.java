@@ -17,13 +17,12 @@ public class DoublyLList {
             current = current.getSucc();
         }
     }
-
     public static abstract class InspectionStrategy
     {
         public abstract void inspect(Object ref);
     }
 
-    public void inspectAll(InspectionStrategy s)
+     public void inspectAll(InspectionStrategy s)
     {
         Element current = first;
         while(current != null)
@@ -36,6 +35,41 @@ public class DoublyLList {
     public static abstract class DeletionStrategy
     {
         public abstract boolean select(Object ref);
+    }
+
+    public interface SubstituirStrategia<S>{
+        Object substituir(Object ref);
+    }
+    public void substituirCadaNelementos(SubstituirStrategia s, int n)
+    {
+        Element current = first;
+        int control = 1;
+        while(current != null && control < size && n < size)
+        {
+            if(control % n == 0)
+            {
+                current.setContent(s.substituir(current.getContent()));
+            }
+            current = current.getSucc();
+            control ++;
+
+        }
+    }
+    public interface DeleteDelete<S>{
+        boolean escolher(Object ref);
+    }
+
+    public void deleteTheEscolhido(DeleteDelete<Object> ref){
+        Element current = first;
+        while(current != null)
+        {
+            Element candidate = current;
+            current = current.getSucc();
+            if(ref.escolher(candidate.getContent()))
+            {
+                remove(candidate);}
+        }
+
     }
 
     public void deleteSelected(DeletionStrategy s)
@@ -129,10 +163,6 @@ public class DoublyLList {
             current.getPred().connectAsSucc(current.getSucc());
             current.getSucc().connectAsPred(current.getPred()); // Necessary ?
 
-            //Element predCur = current.getPred();
-            //predCur.connectAsSucc(current.getSucc());
-           // current.getSucc().connectAsPred(predCur);
-            //current.disconnectPred();current.disconnectSucc();
             current = null; size --;
         }
     }
