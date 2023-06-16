@@ -1,10 +1,9 @@
 package framework_strategies;
-
 public class Main {
 
     public static void main(String[] args)
     {
-        deletionStrategy();
+        someTest();
     }
 
     public static void deletionStrategy()
@@ -13,6 +12,21 @@ public class Main {
         RemoveEvenInts_DeletionStrategy odd = new RemoveEvenInts_DeletionStrategy();
         list.deleteSelected(odd);
         list.show();
+    }
+
+    public static void something()
+    {
+        DoublyLList list = new DoublyLList(); int[] a = {67,41,90,4,5,6,55,4,12};  list.addIntArr(a) ;list.show();
+        DeletaCada3 lala = new DeletaCada3();
+        list.deleteTheEscolhido(lala);
+        list.show();
+    }
+
+    public static void someTest()
+    {
+        DoublyLList list = new DoublyLList(); int[] a = {67,41,90,4,5,6,55,4,12,2,7,3}; list.addIntArr(a) ;list.show();
+        SubstituirPorJohny jojo =  new SubstituirPorJohny("_");
+        list.substituirCadaNelementos(jojo,5);list.show();
     }
     public static void inspectionStrategy()
     {

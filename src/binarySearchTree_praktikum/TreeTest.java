@@ -4,11 +4,23 @@ public class TreeTest
 {
     public static void main( String[] args )
     {
-        testEqualStructure();
+        testTraversal();
+
+        /*testEqualStructure();
         testRotate();
         testCompleteNodesAndStructure();
         testMinimumAndContains();
-        preOrder_Height_Count_Encode();
+        preOrder_Height_Count_Encode();*/
+    }
+
+    public static void testTraversal()
+    {
+        char[] lola = {'k','h','o','f','n','j'};
+        CharacterSearchTree t = new CharacterSearchTree(lola);
+        System.out.println("Pre Order: "); t.showPreOrder();
+        System.out.println("In Order: "); t.showInOrder();
+        System.out.println("Post Order: "); t.showPostOrder();
+
     }
 
     /** testRotate: encode(), rotateNodeToRight(), resetCode() **/
